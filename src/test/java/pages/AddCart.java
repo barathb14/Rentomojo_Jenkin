@@ -30,6 +30,7 @@ public class AddCart {
 	
 	@FindBy(css="#app > div.dialog__content.dialog__content__active > div > div.dialog-content > div > div.col-md-6.rm-product__details > div > div.rm-buttons > div > a")
 	WebElement view;
+	System.out.println("test");
 	
 	
 	
