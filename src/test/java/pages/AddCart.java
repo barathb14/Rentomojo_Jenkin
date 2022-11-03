@@ -41,7 +41,7 @@ public class AddCart {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
 //		act.moveToElement(obj).perform();
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("arguments[0].onmouseover();", obj);
+		js.executeScript("arguments[0].focus();", obj);
 		selected.click();
 		added.click();
 //		Thread.sleep(4000);
