@@ -30,21 +30,24 @@ public class AddCart {
 	
 	@FindBy(css="#app > div.dialog__content.dialog__content__active > div > div.dialog-content > div > div.col-md-6.rm-product__details > div > div.rm-buttons > div > a")
 	WebElement view;
-	System.out.println("test");
+	
 	
 	
 	
 	
 	public void addAction() throws InterruptedException {
-		Actions act=new Actions(driver);
+//		Actions act=new Actions(driver);
 //		Thread.sleep(4000);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
-		act.moveToElement(obj).perform();
+//		act.moveToElement(obj).perform();
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].onmouseover();", obj);
 		selected.click();
 		added.click();
 //		Thread.sleep(4000);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
 		view.click();
+		System.out.println("test");
 		
 	}
 }
